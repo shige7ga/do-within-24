@@ -10,7 +10,7 @@ export default function TopPage() {
         あなたの人生が24時間以内に動き始めます。
       </p>
 
-      <Link to="/result" className={styles.link}>
+      <Link to="/ideal" className={styles.link}>
         理想への一歩を踏み出す
       </Link>
     </div>

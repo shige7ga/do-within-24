@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import TopPage from "./pages/top";
-import IdealResultPage from "./pages/ideal/idealResultPage";
+import IdealPage from "./pages/ideal/idealPage";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<TopPage />} />
-      <Route path="/result" element={<IdealResultPage />} />
+      <Route path="/ideal" element={<IdealPage />} />
     </Routes>
   );
 }
