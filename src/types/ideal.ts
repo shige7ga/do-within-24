@@ -1,5 +1,4 @@
-export infterface Idel {
-  id: number;
+export interface Ideal {
   ideal: string;
   benefits: string;
   drawbacks: string;
