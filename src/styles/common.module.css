@@ -12,6 +12,12 @@
   margin-bottom: 1.5rem;
 }
 
+.subtitle {
+  font-size: 1.8rem;
+  color: #4e4e4e;
+  margin-bottom: 1rem;
+}
+
 .description {
   font-size: 1.2rem;
   color: #666;
