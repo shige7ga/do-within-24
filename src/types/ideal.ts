@@ -4,3 +4,5 @@ export interface Ideal {
   drawbacks: string;
   action: string;
 }
+
+export type IdealContextFormData = Omit<Ideal, "benefits" | "drawbacks" | "action">;
