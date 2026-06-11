@@ -1,9 +1,10 @@
+// SingleTextareaForm.tsx
 import type React from "react";
-import type { BenefitsFormData } from "../../../types/ideal";
 import styles from "../styles/idealForm.module.css";
 
 type Props = {
-  formData: BenefitsFormData;
+  fieldName: string;
+  value: string;
   onChange: (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -12,20 +13,20 @@ type Props = {
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 };
 
-export default function BenefitsForm({ formData, onChange, onSubmit }: Props) {
+export default function TextareaForm({ fieldName, value, onChange, onSubmit }: Props) {
   return (
     <form onSubmit={onSubmit} className={styles.form}>
       <div className={styles.formGroup}>
         <textarea
-          name="benefits"
-          value={formData.benefits}
+          name={fieldName}
+          value={value}
           onChange={onChange}
           required
         />
       </div>
       <button type="submit" className={styles.submitButton}>
-        送信する
+        次へ進む
       </button>
     </form>
   );
-};
+}

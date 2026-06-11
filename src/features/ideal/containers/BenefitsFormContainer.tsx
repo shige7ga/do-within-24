@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import BenefitsForm from "../components/BenefitsForm";
 import { createBenefits } from "../hooks/createBenefits";
 import styles from "../styles/idealForm.module.css";
 import type { BenefitsFormData } from "../../../types/ideal";
+import TextareaForm from "../components/TextareaForm";
 
 export default function BenefitsFormContainer() {
   const [formData, setFormData] = useState<BenefitsFormData>({
@@ -33,8 +33,9 @@ export default function BenefitsFormContainer() {
     return (
       <div className={styles.container}>
       <h1>理想を叶えたら得られるメリットは何でしょう？</h1>
-      <BenefitsForm
-        formData={formData}
+      <TextareaForm
+        fieldName="benefits"
+        value={formData.benefits}
         onChange={handleChange}
         onSubmit={handleSubmit}
       />

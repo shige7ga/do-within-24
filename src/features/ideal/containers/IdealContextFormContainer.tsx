@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import IdealContextForm from "../components/IdealContextForm";
 import { createIdeal } from "../hooks/createIdeal";
 import styles from "../styles/idealForm.module.css";
 import type { IdealContextFormData } from "../../../types/ideal";
+import TextareaForm from "../components/TextareaForm";
 
 export default function IdealContextFromContainer() {
   const [formData, setFormData] = useState<IdealContextFormData>({
@@ -33,8 +33,9 @@ export default function IdealContextFromContainer() {
   return (
     <div className={styles.container}>
       <h1>理想を書く</h1>
-      <IdealContextForm
-        formData={formData}
+      <TextareaForm
+        fieldName="context"
+        value={formData.context}
         onChange={handleChange}
         onSubmit={handleSubmit}
       />
