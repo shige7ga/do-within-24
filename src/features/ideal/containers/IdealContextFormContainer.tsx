@@ -27,7 +27,7 @@ export default function IdealContextFromContainer() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     createIdeal(formData);
-    navigate("/result");
+    navigate("/benefits");
   };
 
   return (
