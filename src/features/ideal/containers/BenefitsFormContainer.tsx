@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { createIdeal } from "../hooks/createIdeal";
+import { createBenefits } from "../hooks/createBenefits";
 import styles from "../styles/idealForm.module.css";
-import type { IdealContextFormData } from "../../../types/ideal";
+import type { BenefitsFormData } from "../../../types/ideal";
 import TextareaForm from "../components/TextareaForm";
 
-export default function IdealContextFromContainer() {
-  const [formData, setFormData] = useState<IdealContextFormData>({
-    context: "",
+export default function BenefitsFormContainer() {
+  const [formData, setFormData] = useState<BenefitsFormData>({
+    benefits: "",
   });
 
   const navigate = useNavigate();
@@ -25,25 +25,25 @@ export default function IdealContextFromContainer() {
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    createIdeal(formData);
-    navigate("/benefits");
-  };
+      e.preventDefault();
+      createBenefits(formData);
+      navigate("/");
+    };
 
-  return (
-    <div className={styles.container}>
-      <h1>理想を書く</h1>
+    return (
+      <div className={styles.container}>
+      <h1>理想を叶えたら得られるメリットは何でしょう？</h1>
       <TextareaForm
-        fieldName="context"
-        value={formData.context}
+        fieldName="benefits"
+        value={formData.benefits}
         onChange={handleChange}
         onSubmit={handleSubmit}
       />
       <div className={styles.cancelContainer}>
-        <Link to="/" className={styles.cancelLink}>
+        <Link to="/ideal" className={styles.cancelLink}>
           前の画面に戻る
         </Link>
       </div>
     </div>
-  );
+    );
 }
