@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { createBenefits } from "../hooks/createBenefits";
+import { createIdeal } from "../hooks/createIdeal";
 import styles from "../styles/idealForm.module.css";
 import type { BenefitsFormData } from "../../../types/ideal";
 import TextareaForm from "../components/TextareaForm";
@@ -25,10 +25,10 @@ export default function BenefitsFormContainer() {
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      createBenefits(formData);
-      navigate("/");
-    };
+    e.preventDefault();
+    createIdeal(formData);
+    navigate("/");
+  };
 
     return (
       <div className={styles.container}>
