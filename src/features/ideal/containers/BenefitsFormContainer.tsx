@@ -1,28 +1,19 @@
-import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { createIdeal } from "../hooks/createIdeal";
 import styles from "../styles/idealForm.module.css";
-import type { BenefitsFormData } from "../../../types/ideal";
+import { useSimpleForm } from "../hooks/useSimpleForm";
 import TextareaForm from "../components/TextareaForm";
+import type { BenefitsFormData } from "../../../types/ideal";
 
 export default function BenefitsFormContainer() {
-  const [formData, setFormData] = useState<BenefitsFormData>({
-    benefits: "",
-  });
+  const {
+      formData,
+      handleChange,
+    } = useSimpleForm<BenefitsFormData>({
+      benefits: "",
+    });
 
-  const navigate = useNavigate();
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+    const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
