@@ -5,7 +5,7 @@ export interface Ideal {
   action: string;
 }
 
-export type IdealContextFormData = Omit<Ideal, "benefits" | "drawbacks" | "action">;
-export type BenefitsFormData = Omit<Ideal, "context" | "drawbacks" | "action">;
-export type DrawbacksFormData = Omit<Ideal, "context" | "benefits" | "action">;
-export type ActionFormData = Omit<Ideal, "context" | "benefits" | "drawbacks">;
+export type IdealContextFormData = Pick<Ideal, "context">;
+export type BenefitsFormData = Pick<Ideal, "benefits">;
+export type DrawbacksFormData = Pick<Ideal, "drawbacks">;
+export type ActionFormData = Pick<Ideal, "action">;

@@ -1,28 +1,19 @@
-import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { createIdeal } from "../hooks/createIdeal";
 import styles from "../styles/idealForm.module.css";
-import type { IdealContextFormData } from "../../../types/ideal";
+import { useSimpleForm } from "../hooks/useSimpleForm";
 import TextareaForm from "../components/TextareaForm";
+import type { IdealContextFormData } from "../../../types/ideal";
 
 export default function IdealContextFromContainer() {
-  const [formData, setFormData] = useState<IdealContextFormData>({
+  const {
+    formData,
+    handleChange,
+  } = useSimpleForm<IdealContextFormData>({
     context: "",
   });
 
   const navigate = useNavigate();
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
