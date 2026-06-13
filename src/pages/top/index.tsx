@@ -14,10 +14,13 @@ export default function TopPage() {
       <Link to="/ideal" className={styles.link}>
         理想への一歩を踏み出す
       </Link>
+
       {/* テストの為、いったん表示。後で削除予定 */}
-      <Link to="/result" className={styles.link}>
-        結果を見る
-      </Link>
+      <div>
+        <Link to="/result" className={styles.link}>
+          結果を見る
+        </Link>
+      </div>
     </div>
   );
 }
