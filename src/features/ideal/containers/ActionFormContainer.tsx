@@ -3,35 +3,35 @@ import { createIdeal } from "../hooks/createIdeal";
 import styles from "../styles/idealForm.module.css";
 import { useSimpleForm } from "../hooks/useSimpleForm";
 import TextareaForm from "../components/TextareaForm";
-import type { DrawbacksFormData } from "../../../types/ideal";
+import type { ActionFormData } from "../../../types/ideal";
 
-export default function DrawbacksFormContainer() {
+export default function ActionFormContainer() {
   const {
       formData,
       handleChange,
-    } = useSimpleForm<DrawbacksFormData>({
-      drawbacks: "",
+    } = useSimpleForm<ActionFormData>({
+      action: "",
     });
 
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     createIdeal(formData);
-    navigate("/action");
+    navigate("/result");
   };
 
     return (
       <div className={styles.container}>
-      <h1>理想を叶えることで生じるデメリットは何でしょう？</h1>
+      <h1>理想を叶えるために24時間以内に実施できることは？</h1>
       <TextareaForm
-        fieldName="drawbacks"
-        value={formData.drawbacks}
+        fieldName="action"
+        value={formData.action}
         onChange={handleChange}
         onSubmit={handleSubmit}
       />
       <div className={styles.cancelContainer}>
-        <Link to="/benefits" className={styles.cancelLink}>
+        <Link to="/drawbacks" className={styles.cancelLink}>
           前の画面に戻る
         </Link>
       </div>
