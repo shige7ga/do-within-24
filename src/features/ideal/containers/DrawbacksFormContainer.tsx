@@ -18,7 +18,7 @@ export default function DrawbacksFormContainer() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     createIdeal(formData);
-    navigate("/action");
+    navigate("/comparison");
   };
 
     return (

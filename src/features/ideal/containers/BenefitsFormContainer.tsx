@@ -13,7 +13,7 @@ export default function BenefitsFormContainer() {
       benefits: "",
     });
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

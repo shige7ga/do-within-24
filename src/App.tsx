@@ -3,6 +3,7 @@ import TopPage from "./pages/top";
 import IdealPage from "./pages/ideal/idealPage";
 import BenefitsPage from "./pages/ideal/benefitsPage";
 import DrawbacksPage from "./pages/ideal/drawbacksPage";
+import ComparisonPage from "./pages/ideal/comparisonPage";
 import ActionPage from "./pages/ideal/actionPage";
 import ResultPage from "./pages/ideal/resultPage";
 
@@ -13,6 +14,7 @@ function App() {
       <Route path="/ideal" element={<IdealPage />} />
       <Route path="/benefits" element={<BenefitsPage />} />
       <Route path="/drawbacks" element={<DrawbacksPage />} />
+      <Route path="/comparison" element={<ComparisonPage />} />
       <Route path="/action" element={<ActionPage />} />
       <Route path="/result" element={<ResultPage />} />
     </Routes>
