@@ -7,13 +7,13 @@ import type { BenefitsFormData } from "../../../types/ideal";
 
 export default function BenefitsFormContainer() {
   const {
-      formData,
-      handleChange,
-    } = useSimpleForm<BenefitsFormData>({
-      benefits: "",
-    });
+    formData,
+    handleChange,
+  } = useSimpleForm<BenefitsFormData>({
+    benefits: "",
+  });
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

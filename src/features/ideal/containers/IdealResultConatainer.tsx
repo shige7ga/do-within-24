@@ -4,7 +4,7 @@ import styles from "../../../styles/common.module.css";
 export default function IdealResultContainer() {
   return (
     <div>
-      <h1 className={styles.title}>理想の叶える今日の一歩</h1>
+      <h1 className={styles.title}>理想に近づく今日の一歩</h1>
       <div>
         <h3 className={styles.subtitle}>あなたの理想</h3>
         <p className={styles.description}>{mockIdeal.context}</p>

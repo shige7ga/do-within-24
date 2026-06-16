@@ -7,13 +7,13 @@ import type { ActionFormData } from "../../../types/ideal";
 
 export default function ActionFormContainer() {
   const {
-      formData,
-      handleChange,
-    } = useSimpleForm<ActionFormData>({
-      action: "",
-    });
+    formData,
+    handleChange,
+  } = useSimpleForm<ActionFormData>({
+    action: "",
+  });
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
