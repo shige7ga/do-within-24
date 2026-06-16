@@ -1,26 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 import styles from "../styles/idealForm.module.css";
-import { useSimpleForm } from "../hooks/useSimpleForm";
-import type { ActionFormData } from "../../../types/ideal";
 import { createIdeal } from "../hooks/createIdeal";
 
 export default function ComparisonContainer() {
-  const {
-    formData,
-    setFormData,
-  } = useSimpleForm<ActionFormData>({
-    action: "",
-  });
-
   const navigate = useNavigate();
-
   const handleDemerit = () => {
-    setFormData((prev) => ({
-      ...prev,
+    createIdeal({
       action: "この理想のことは一旦考えない",
-    }));
-
-    createIdeal(formData);
+    });
     navigate("/result");
   }
 

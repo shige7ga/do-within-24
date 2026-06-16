@@ -7,11 +7,11 @@ import type { ActionFormData } from "../../../types/ideal";
 
 export default function ActionFormContainer() {
   const {
-      formData,
-      handleChange,
-    } = useSimpleForm<ActionFormData>({
-      action: "",
-    });
+    formData,
+    handleChange,
+  } = useSimpleForm<ActionFormData>({
+    action: "",
+  });
 
   const navigate = useNavigate();
 

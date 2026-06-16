@@ -7,11 +7,11 @@ import type { DrawbacksFormData } from "../../../types/ideal";
 
 export default function DrawbacksFormContainer() {
   const {
-      formData,
-      handleChange,
-    } = useSimpleForm<DrawbacksFormData>({
-      drawbacks: "",
-    });
+    formData,
+    handleChange,
+  } = useSimpleForm<DrawbacksFormData>({
+    drawbacks: "",
+  });
 
   const navigate = useNavigate();
 
