@@ -6,11 +6,18 @@ export default function ComparisonContainer() {
     <div className={styles.container}>
     <h1>メリットとデメリットを比較してみる</h1>
 
-    <div >
+    <div>
       <Link to="/action" className={styles.submitButton}>
         メリットの方が大きい
       </Link>
     </div>
+
+    <div>
+      <Link to="/result" className={styles.submitButton}>
+        デメリットの方が大きい
+      </Link>
+    </div>
+
     <div className={styles.cancelContainer}>
       <Link to="/drawbacks" className={styles.cancelLink}>
         前の画面に戻る
