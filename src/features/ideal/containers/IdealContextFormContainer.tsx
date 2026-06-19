@@ -4,13 +4,14 @@ import styles from "../styles/idealForm.module.css";
 import { useSimpleForm } from "../hooks/useSimpleForm";
 import TextareaForm from "../components/TextareaForm";
 import type { IdealContextFormData } from "../../../types/ideal";
+import { idealData } from "../data/ideal";
 
 export default function IdealContextFromContainer() {
   const {
     formData,
     handleChange,
   } = useSimpleForm<IdealContextFormData>({
-    context: "",
+    context: idealData.context,
   });
 
   const navigate = useNavigate();

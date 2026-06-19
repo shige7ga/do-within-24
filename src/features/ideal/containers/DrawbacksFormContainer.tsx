@@ -4,13 +4,14 @@ import styles from "../styles/idealForm.module.css";
 import { useSimpleForm } from "../hooks/useSimpleForm";
 import TextareaForm from "../components/TextareaForm";
 import type { DrawbacksFormData } from "../../../types/ideal";
+import { idealData } from "../data/ideal";
 
 export default function DrawbacksFormContainer() {
   const {
     formData,
     handleChange,
   } = useSimpleForm<DrawbacksFormData>({
-    drawbacks: "",
+    drawbacks: idealData.drawbacks,
   });
 
   const navigate = useNavigate();

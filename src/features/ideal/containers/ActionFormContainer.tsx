@@ -4,13 +4,14 @@ import styles from "../styles/idealForm.module.css";
 import { useSimpleForm } from "../hooks/useSimpleForm";
 import TextareaForm from "../components/TextareaForm";
 import type { ActionFormData } from "../../../types/ideal";
+import { idealData } from "../data/ideal";
 
 export default function ActionFormContainer() {
   const {
     formData,
     handleChange,
   } = useSimpleForm<ActionFormData>({
-    action: "",
+    action: idealData.action,
   });
 
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ export default function ActionFormContainer() {
         onSubmit={handleSubmit}
       />
       <div className={styles.cancelContainer}>
-        <Link to="/drawbacks" className={styles.cancelLink}>
+        <Link to="/comparison" className={styles.cancelLink}>
           前の画面に戻る
         </Link>
       </div>

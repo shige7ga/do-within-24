@@ -1,9 +1,9 @@
 import type { Ideal } from "../../../types/ideal";
-import { mockIdeal } from "../mocks/ideal";
+import { idealData } from "../data/ideal";
 
 export const createIdeal = (
   data: Partial<Ideal>
 ): Ideal => {
-  Object.assign(mockIdeal, data);
-  return mockIdeal;
+  Object.assign(idealData, data);
+  return idealData;
 }
