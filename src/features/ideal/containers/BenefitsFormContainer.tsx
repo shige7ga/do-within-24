@@ -4,13 +4,14 @@ import styles from "../styles/idealForm.module.css";
 import { useSimpleForm } from "../hooks/useSimpleForm";
 import TextareaForm from "../components/TextareaForm";
 import type { BenefitsFormData } from "../../../types/ideal";
+import { idealData } from "../data/ideal";
 
 export default function BenefitsFormContainer() {
   const {
     formData,
     handleChange,
   } = useSimpleForm<BenefitsFormData>({
-    benefits: "",
+    benefits: idealData.benefits,
   });
 
   const navigate = useNavigate();
