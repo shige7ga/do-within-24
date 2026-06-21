@@ -1,6 +1,6 @@
 .container {
   max-width: 720px;
-  margin: 3rem auto;
+  margin: 2rem auto;
   padding: 0 1rem;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .submitButton {
-  background-color: #1bee69;
+  background-color: #41dc7a;
   color: white;
   padding: 0.8rem 1.5rem;
   border: none;
@@ -77,4 +77,30 @@
 
 .cancelLink:hover {
   background-color: #525f73;
+}
+
+.idealCard {
+  margin: 0.8rem 0;
+  padding: 1rem 1.5rem;
+
+  background-color: #efffef;
+  border-left: 6px solid #41dc7a;
+
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.idealCardTitle {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.idealCardContent {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #334158;
+  white-space: pre-wrap;
 }

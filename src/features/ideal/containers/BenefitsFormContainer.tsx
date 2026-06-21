@@ -24,7 +24,14 @@ export default function BenefitsFormContainer() {
 
     return (
       <div className={styles.container}>
-      <h1>理想を叶えたら得られるメリットは何でしょう？</h1>
+      <h1 className={styles.title}>なぜ、その理想を実現したいですか？</h1>
+      <div className={styles.idealCard}>
+        <h2 className={styles.idealCardTitle}>あなたの理想</h2>
+        <p className={styles.idealCardContent}>
+          {idealData.context}
+        </p>
+      </div>
+      <p className={styles.description}>この理想を実現したい理由や、達成することで得られるメリットを記入してください。<br/>「なぜ？」を深掘りすると、本当に大切にしたい価値観が見えてきます。<br/>例：好きな場所で自由に働きたい、海外の人とも交流したい、自分に自信を持ちたい 等</p>
       <TextareaForm
         fieldName="benefits"
         value={formData.benefits}
