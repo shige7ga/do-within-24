@@ -24,7 +24,7 @@ export default function DrawbacksFormContainer() {
 
     return (
       <div className={styles.container}>
-        <h1>理想を実現することで失うものはありますか？</h1>
+        <h1 className={styles.title}>理想を実現することで失うものはありますか？</h1>
         <div className={styles.idealCard}>
           <h2 className={styles.idealCardTitle}>あなたの理想</h2>
           <p className={styles.idealCardContent}>
