@@ -7,9 +7,9 @@ export default function ComparisonContainer() {
   const navigate = useNavigate();
   const handleDemerit = () => {
     createIdeal({
-      action: "この理想について、一旦考えない",
+      action: "この理想について\n一旦考えない",
     });
-    navigate("/result");
+  navigate("/result");
   }
 
   return (
