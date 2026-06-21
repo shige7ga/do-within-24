@@ -24,9 +24,8 @@ export default function IdealContextFromContainer() {
 
   return (
     <div className={styles.container}>
-      <h1>理想を書く</h1>
-      <p>あなたが実現したいこと、なりたい自分、手に入れたい未来を書いてください。</p>
-      <p>例：世界一周旅行をしたい、英語を話せるようになりたい、自分で作ったアプリを公開したい 等</p>
+      <h1 className={styles.title}>理想を書く</h1>
+      <p className={styles.description}>あなたが実現したいこと、なりたい自分、手に入れたい未来を書いてください。<br/>例：世界一周旅行をしたい、英語を話せるようになりたい、自分で作ったアプリを公開したい 等</p>
       <TextareaForm
         fieldName="context"
         value={formData.context}

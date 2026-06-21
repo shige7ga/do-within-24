@@ -26,7 +26,7 @@
 
 .link {
   display: inline-block;
-  background-color: #0070f3;
+  background-color: #1bee69;
   color: white;
   padding: 0.8rem 1.5rem;
   margin-bottom: 1rem;
@@ -37,5 +37,5 @@
 }
 
 .link:hover {
-  background-color: #0051bb;
+  background-color: #08b648;
 }
