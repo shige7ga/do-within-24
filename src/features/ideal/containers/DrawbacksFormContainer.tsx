@@ -24,7 +24,14 @@ export default function DrawbacksFormContainer() {
 
     return (
       <div className={styles.container}>
-        <h1>理想を叶えることで生じるデメリットは何でしょう？</h1>
+        <h1 className={styles.title}>理想を実現することで失うものはありますか？</h1>
+        <div className={styles.idealCard}>
+          <h2 className={styles.idealCardTitle}>あなたの理想</h2>
+          <p className={styles.idealCardContent}>
+            {idealData.context}
+          </p>
+        </div>
+        <p className={styles.description}>理想を追いかけることで失うものや、払う必要がある代償を書いてください。<br/>理想には必ずコストやデメリットがあります。先に考えておくことで後悔しにくくなります。<br/>例：自由な時間が減る、勉強時間を確保する必要がある、失敗するかもしれない 等</p>
         <TextareaForm
           fieldName="drawbacks"
           value={formData.drawbacks}

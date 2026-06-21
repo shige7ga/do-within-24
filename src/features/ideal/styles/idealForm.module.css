@@ -1,6 +1,7 @@
 .container {
   max-width: 720px;
-  margin: 4rem auto;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 .form {
@@ -10,6 +11,7 @@
   background-color: #fff;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .formGroup {
@@ -23,17 +25,29 @@
   color: #333;
 }
 
-.formGroup input,
-.formGroup textarea,
-.formGroup select {
+.formGroup textarea {
   width: 100%;
   padding: 0.5rem;
+  box-sizing: border-box;
   border: 1px solid #ccc;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
+  height: 200px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
 }
 
 .submitButton {
-  background-color: #0070f3;
+  background-color: #41dc7a;
   color: white;
   padding: 0.8rem 1.5rem;
   border: none;
@@ -44,7 +58,7 @@
 }
 
 .submitButton:hover {
-  background-color: #0051bb;
+ background-color: #08b648;;
 }
 
 .cancelContainer {
@@ -63,4 +77,123 @@
 
 .cancelLink:hover {
   background-color: #525f73;
+}
+
+/* 理想を表示するstyles */
+.idealCard {
+  margin: 0.8rem 0;
+  padding: 1rem 1.5rem;
+
+  background-color: #efffef;
+  border-left: 6px solid #41dc7a;
+
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.idealCardTitle {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.idealCardContent {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #334158;
+  white-space: pre-wrap;
+}
+
+/* デリデメを比較するstyles */
+.comparisonContainer {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-width: 0;
+}
+
+.cardTitle {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cardContent {
+  flex: 1;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.comparisonSubmitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.comparisonSubmitButton:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .comparisonContainer {
+    flex-direction: column;
+  }
+}
+
+.cardBenefit {
+  border-top: 5px solid #22c55e;
+  background-color: #f0fdf4;
+}
+
+.cardDrawback {
+  border-top: 5px solid #ef4444;
+  background-color: #fef2f2;
+}
+
+.benefitButton {
+  background-color: #16a34a;
+}
+
+.benefitButton:hover {
+  background-color: #15803d;
+}
+
+.drawbackButton {
+  background-color: #dc2626;
+}
+
+.drawbackButton:hover {
+  background-color: #b91c1c;
+}
+
+.cardContent,
+.idealCardContent {
+  overflow-wrap: anywhere;
 }

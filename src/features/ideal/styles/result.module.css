@@ -1,0 +1,176 @@
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 60px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* =======================
+   Header
+======================= */
+
+.header {
+  border-bottom: 2px solid #7e7e7e;
+  padding-bottom: 24px;
+  margin-bottom: 56px;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.03em;
+}
+
+.date {
+  text-align: right;
+  margin-top: 12px;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* =======================
+   Ideal
+======================= */
+
+.idealSection {
+  margin-bottom: 56px;
+}
+
+.idealLabel {
+  margin: 0 0 16px;
+  color: #111827;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.idealText {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #111827;
+  white-space: pre-wrap;
+}
+
+/* =======================
+   Comparison
+======================= */
+
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.card {
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  background: #f8fafc;
+}
+
+.benefitCard {
+  border-top: 4px solid #27be54;
+}
+
+.drawbackCard {
+  border-top: 4px solid #dc4935f0;
+}
+
+.cardTitle {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.cardContent {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.9;
+  color: #374151;
+}
+
+/* =======================
+   Action
+======================= */
+
+.actionSection {
+  text-align: center;
+  padding: 48px;
+  border-radius: 24px;
+  background: linear-gradient(
+    135deg,
+    #3af177,
+    #017a33
+  );
+}
+
+.actionLabel {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.actionText {
+  margin-top: 16px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+/* =======================
+   Footer
+======================= */
+
+.footer {
+  text-align: center;
+  margin-top: 32px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+/* =======================
+   Responsive
+======================= */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 32px 24px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .idealText {
+    font-size: 1.5rem;
+  }
+
+  .comparisonGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .actionText {
+    font-size: 1.8rem;
+  }
+}
+
+.idealText,
+.cardContent,
+.actionText {
+  overflow-wrap: anywhere;
+}

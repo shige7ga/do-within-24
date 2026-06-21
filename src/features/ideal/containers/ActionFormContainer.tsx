@@ -24,7 +24,8 @@ export default function ActionFormContainer() {
 
     return (
       <div className={styles.container}>
-      <h1>理想を叶えるために24時間以内に実施できることは？</h1>
+      <h1 className={styles.title}>24時間以内に実施できることは？</h1>
+      <p className={styles.description}>理想に近づくために、24時間以内に実行できる小さな行動を書いてください。<br/>完璧な計画ではなく、「今すぐできること」を考えるのがポイントです。<br />無理しないとできないことではなく、やろうと思えば必ずできることを考えてください。<br/>例：英語学習アプリをインストールする、世界一周旅行についてサイトを検索する、アプリのアイデアをメモする 等</p>
       <TextareaForm
         fieldName="action"
         value={formData.action}

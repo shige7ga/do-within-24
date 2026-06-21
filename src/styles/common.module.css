@@ -26,7 +26,7 @@
 
 .link {
   display: inline-block;
-  background-color: #0070f3;
+  background-color: #41dc7a;
   color: white;
   padding: 0.8rem 1.5rem;
   margin-bottom: 1rem;
@@ -37,5 +37,34 @@
 }
 
 .link:hover {
-  background-color: #0051bb;
+  background-color: #08b648;
+}
+
+/* 印刷ボタン */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 0;
+  margin-bottom: 0;
+  background: white;
+  z-index: 10;
+}
+
+.captureButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #c6c4c4;
+}
+
+.captureButton:hover {
+  background-color: #a7a6a6;
 }
